@@ -1,0 +1,1 @@
+# GET /stream/{id} (SSE)
