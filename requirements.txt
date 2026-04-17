@@ -1,1 +1,28 @@
-# Python dependencies
+# Core framework
+fastapi
+uvicorn[standard]
+
+# Text extraction — digital PDFs
+pdfplumber
+
+# OCR — images and scanned PDFs
+pytesseract
+Pillow
+pypdfium2
+
+# DOCX support
+python-docx
+
+# LLM
+google-genai
+
+# Env
+python-dotenv
+
+# Google Calendar
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+
+# Utilities
+python-multipart
