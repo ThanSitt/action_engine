@@ -10,7 +10,7 @@ from googleapiclient.discovery import build
 from app.models.schemas import ExtractedAction
 
 SCOPES = ["https://www.googleapis.com/auth/calendar.events"]
-TIMEZONE = "Asia/Yangon"
+TIMEZONE = "Europe/Helsinki"
 
 _BASE = Path(__file__).parent.parent  # app/
 _CREDENTIALS_FILE = _BASE / "credentials.json"
