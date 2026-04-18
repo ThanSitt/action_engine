@@ -1,0 +1,62 @@
+:root {
+  --text: #43474f;                /* on-surface-variant */
+  --text-h: #181c20;             /* on-surface */
+  --bg: #f7f9ff;                 /* background */
+  --border: #c3c6d0;             /* outline-variant */
+  --code-bg: #ebeef4;            /* surface-container */
+
+  --accent: #002c53;             /* primary */
+  --accent-bg: rgba(0, 44, 83, 0.08);
+  --accent-border: rgba(0, 44, 83, 0.3);
+
+  --social-bg: #f1f4fa;          /* surface-container-low */
+
+  --shadow:
+    rgba(0, 0, 0, 0.08) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
+
+  /* Typography */
+  --sans: 'Work Sans', system-ui, sans-serif;
+  --heading: 'Manrope', system-ui, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* Dark mode mapped properly */
+@media (prefers-color-scheme: dark) {
+  :root.dark {
+  --text: #c3c6d0;
+  --text-h: #f7f9ff;
+  --bg: #181c20;
+  --border: #3b475a;
+  --code-bg: #2b3137;
+
+  --accent: #a5c9fd;
+  --accent-bg: rgba(165, 201, 253, 0.1);
+  --accent-border: rgba(165, 201, 253, 0.4);
+
+  --social-bg: #1c2025;
+
+  --shadow:
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+}
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
