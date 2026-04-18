@@ -1,62 +1,48 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 :root {
-  --text: #43474f;                /* on-surface-variant */
-  --text-h: #181c20;             /* on-surface */
-  --bg: #f7f9ff;                 /* background */
-  --border: #c3c6d0;             /* outline-variant */
-  --code-bg: #ebeef4;            /* surface-container */
-
-  --accent: #002c53;             /* primary */
-  --accent-bg: rgba(0, 44, 83, 0.08);
-  --accent-border: rgba(0, 44, 83, 0.3);
-
-  --social-bg: #f1f4fa;          /* surface-container-low */
-
-  --shadow:
-    rgba(0, 0, 0, 0.08) 0 10px 15px -3px,
-    rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
-
-  /* Typography */
+  --text: #4a4a5a;
+  --text-h: #1a1a2e;
+  --bg: #f5f4f8;
+  --border: #dddbe8;
+  --surface: #ffffff;
+  --surface-low: #f0eef8;
+  --accent: #5c3d9e;
+  --accent-light: #ede9f9;
+  --accent-border: rgba(92, 61, 158, 0.3);
+  --dot: #0f9e72;
+  --green-bg: #e1f5ee;
+  --green-text: #085041;
+  --red-bg: #fcebeb;
+  --red-text: #791f1f;
   --sans: 'Work Sans', system-ui, sans-serif;
   --heading: 'Manrope', system-ui, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+}
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
+html.dark {
+  --text: #b8b5cc;
+  --text-h: #eeedf7;
+  --bg: #13121e;
+  --border: #2e2b45;
+  --surface: #1c1a2e;
+  --surface-low: #201d33;
+  --accent: #a78bfa;
+  --accent-light: rgba(167, 139, 250, 0.12);
+  --accent-border: rgba(167, 139, 250, 0.35);
+  --dot: #5dcaa5;
+  --green-bg: #085041;
+  --green-text: #9fe1cb;
+  --red-bg: #501313;
+  --red-text: #f7c1c1;
+}
+
+body {
+  font-family: var(--sans);
   background: var(--bg);
-
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (max-width: 1024px) {
-  :root {
-    font-size: 16px;
-  }
-}
-
-/* Dark mode mapped properly */
-@media (prefers-color-scheme: dark) {
-  :root.dark {
-  --text: #c3c6d0;
-  --text-h: #f7f9ff;
-  --bg: #181c20;
-  --border: #3b475a;
-  --code-bg: #2b3137;
-
-  --accent: #a5c9fd;
-  --accent-bg: rgba(165, 201, 253, 0.1);
-  --accent-border: rgba(165, 201, 253, 0.4);
-
-  --social-bg: #1c2025;
-
-  --shadow:
-    rgba(0, 0, 0, 0.4) 0 10px 15px -3px,
-    rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-}
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
 }
