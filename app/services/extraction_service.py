@@ -15,9 +15,10 @@ from docx import Document
 from PIL import Image
 
 # For Windows users
-# pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-pytesseract.pytesseract.tesseract_cmd = "/opt/homebrew/bin/tesseract"
+#For macOS users
+# pytesseract.pytesseract.tesseract_cmd = "/opt/homebrew/bin/tesseract"
 
 SUPPORTED_IMAGE_TYPES = {".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif", ".webp"}
 SUPPORTED_PDF_TYPES = {".pdf"}

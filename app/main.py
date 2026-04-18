@@ -10,7 +10,7 @@ app = FastAPI(title="Document Intelligence Pipeline")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5175"],  # Vite default port
+    allow_origins=["http://localhost:5173", "http://localhost:5175"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
