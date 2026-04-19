@@ -143,7 +143,7 @@ The first time a calendar event is created, a browser window will open asking yo
 
 - **Single action per document** — the LLM extracts one action per upload. Documents with multiple actions (e.g., an email thread with several meeting requests) will only produce one calendar event.
 - **Calendar only** — the pipeline supports `create_calendar_event` and `set_reminder` action types. `send_email` is identified but not executed.
-- **Hardcoded timezone** — the timezone is set to `Asia/Yangon` in `calendar_service.py`. This would need to be user-configurable in production.
+- **Hardcoded timezone** — the timezone is set to `Europe/Helsinki` in `calendar_service.py`. This would need to be user-configurable in production.
 - **In-memory storage** — uploaded files and SSE queues are stored in memory. Restarting the server loses all state. A production version would use a database and object storage.
 - **No authentication** — the API has no user authentication. Anyone with the server URL can upload files and trigger calendar events.
 - **OCR accuracy** — pytesseract accuracy depends on image quality. Low-resolution or handwritten documents may produce poor extractions.
@@ -153,6 +153,6 @@ The first time a calendar event is created, a browser window will open asking yo
 
 ## AI Tools Used
 
-- **Claude (Anthropic)** — used throughout development as the primary coding assistant. Helped design the overall pipeline architecture, implement the SSE streaming pattern, write the extraction service routing logic, and debug the Google OAuth redirect URI mismatch.
+- **Claude (Anthropic)** — used throughout development as the primary coding assistant. Helped implement the SSE streaming pattern, write the extraction service routing logic, and debug the Google OAuth redirect URI mismatch.
 - **ChatGPT (OpenAI)** — used for frontend development. Helped support React components, styling, and the SSE event listener logic.
 - **Gemini 2.5 Flash (Google)** — used at runtime as the LLM that extracts actions from document text. Not used for writing code.
